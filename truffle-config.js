@@ -30,7 +30,7 @@ module.exports = {
         gasPrice: 100000000000,
         timeoutBlocks: 200,
     }
-}
+},
 
 
  compilers: {
