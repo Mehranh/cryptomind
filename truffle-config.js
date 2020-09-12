@@ -1,3 +1,10 @@
+
+require('dotenv').config();
+const HDWalletProvider = require('truffle-hdwallet-provider');
+// MNEMONIC_PHRASE and INFURA_KEY are mentioned in .env file
+const mnemonic = process.env.MNEMONIC_PHRASE;
+const infuraKey = process.env.INFURA_KEY;
+
 module.exports = {
   // Uncommenting the defaults below 
   // provides for an easier quick-start with Ganache.
