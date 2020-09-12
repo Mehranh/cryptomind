@@ -1,9 +1,7 @@
 
-require('dotenv').config();
-const HDWalletProvider = require('truffle-hdwallet-provider');
-// MNEMONIC_PHRASE and INFURA_KEY are mentioned in .env file
-const mnemonic = process.env.MNEMONIC_PHRASE;
-const infuraKey = process.env.INFURA_KEY;
+var HDWalletProvider = require("truffle-hdwallet-provider");
+require('dotenv').config()  // Store environment-specific variable from '.env' to process.env
+
 
 module.exports = {
   // Uncommenting the defaults below 
@@ -12,7 +10,7 @@ module.exports = {
   // see <http://truffleframework.com/docs/advanced/configuration>
   // for more details on how to specify configuration options!
   //
- networks: {
+networks: {
   development: {
     host: "127.0.0.1",
     port: 7545,
@@ -23,12 +21,11 @@ module.exports = {
     port: 7545,
     network_id: "*"
   },
-   "ropsten-infura": {
-        provider: () => new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/v3/' + infuraKey, 0),
-        network_id: 3,
-        gas: 5500000,
-        gasPrice: 100000000000,
-        timeoutBlocks: 200,
+   ropsten: {
+      provider: () => new HDWalletProvider("eagle enemy couch behind secret pistol slender impose logic dose rent luxury", "https://ropsten.infura.io/v3/f148ade8054b4f85a6934744240f48dc"),
+      network_id: 3,
+      gas: 3000000,
+      gasPrice: 10000000000
     }
 },
 
