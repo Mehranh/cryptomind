@@ -23,7 +23,7 @@ contract ERC20 is Context, IERC20 {
     uint8 private _decimals;
 
 
-    constructor (string memory name, string memory symbol)  {
+    constructor (string memory name, string memory symbol) public  {
         _name = name;
         _symbol = symbol;
         _decimals = 18;

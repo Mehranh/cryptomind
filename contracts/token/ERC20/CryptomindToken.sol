@@ -4,7 +4,7 @@ import "./ERC20.sol";
 
 contract CryptomindToken is ERC20 {
      
-    constructor()  ERC20("Cryptomind", "CR") {
+    constructor()  ERC20("Cryptomind", "CR") public {
       
         _setupDecimals(8);
         _mint(msg.sender, 2000000000 * (10 ** 8));
